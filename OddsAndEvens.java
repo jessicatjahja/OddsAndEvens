@@ -38,24 +38,14 @@ public class OddsAndEvens {
     public static void playGame(){
         Random rand = new Random();
 
-        if(side.equalsIgnoreCase("O")){
-            System.out.print("How many " + "odd \"fingers\" do you put out? Choose a number between 0 and 5: ");
-            fingers = kb.nextInt();
+        System.out.print("How many \"fingers\" do you put out? Choose a number between 0 and 5: ");
+        fingers = kb.nextInt();
 
-            while(fingers != 1 && fingers != 3 && fingers != 5) {
-                System.out.print("Please input a number between 0 and 5: ");
-                fingers = kb.nextInt();
-            }
-        }
-        else if(side.equalsIgnoreCase("E")){
-            System.out.print("How many " + "even \"fingers\" do you put out? Choose a number between 0 and 5: ");
+        while(fingers != 0 && fingers != 1 && fingers != 2 && fingers != 3 && fingers != 4 && fingers != 5) {
+            System.out.print("Please input a number between 0 and 5: ");
             fingers = kb.nextInt();
-
-            while(fingers != 0 && fingers != 2 && fingers != 4) {
-                System.out.print("Please input a number between 0 and 5: ");
-                fingers = kb.nextInt();
-            }
         }
+        
         computerNum = rand.nextInt(6);
         System.out.println("The computer plays " + computerNum + " fingers.");
         System.out.println("------------------------------------------------------------");
